@@ -183,11 +183,11 @@ def _normalize_origin_list(origins):
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 default_cors = "https://launchpadglobal.com.np,https://www.launchpadglobal.com.np"
-CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", default_cors).split(",") if not DEBUG else ["http://localhost:3000", "http://127.0.0.1:3000"]
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", default_cors).split(",")
 CORS_ALLOWED_ORIGINS = _normalize_origin_list(CORS_ALLOWED_ORIGINS)
 
 default_csrf = "https://portal.launchpadglobal.com.np,https://www.launchpadglobal.com.np"
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", default_csrf).split(",") if not DEBUG else ["http://localhost:3000", "http://127.0.0.1:3000"]
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", default_csrf).split(",")
 CSRF_TRUSTED_ORIGINS = _normalize_origin_list(CSRF_TRUSTED_ORIGINS)
 
 """
